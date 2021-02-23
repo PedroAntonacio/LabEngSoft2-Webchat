@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservices-okteto-backend
+spec:
+  selector:
+    matchLabels:
+      app: microservices-okteto-backend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: microservices-okteto-backend
+    spec:
+      containers:
+      - name: microservices-okteto-backend
+        image: miklt/microservices-okteto-backend:latest
+        ports:
+        - containerPort: 5000
