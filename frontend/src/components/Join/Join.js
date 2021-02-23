@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
+import './Join.css';
+
+export default function SignIn() {
+  const [name, setName] = useState('');
+  const [room, setRoom] = useState('');
+
+  return (
+    <div className="joinOuterContainer">
+      <div className="joinInnerContainer">
+        <h1 className="title">Realtime Webchat App <span role="img" aria-label="emoji">💬</span></h1>
+        <p className="text">
+          PCS3853 - Laboratório de Engenharia de Software II<br></br>
+          Pedro Orii Antonacio - nUSP 10333504
+        </p>
+        <h1 className="heading">Entre no chat</h1>
+        <div>
+          <input placeholder="Nome" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+        </div>
+        <div>
+          <input placeholder="Sala" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
+        </div>
+        <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
+          <button className={'button mt-20'} type="submit">Entrar</button>
+        </Link>
+      </div>
+    </div>
+  );
+}

@@ -1,7 +1,7 @@
 .messageBox {
   background: #F3F3F3;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 0px 20px;
   color: white;
   display: inline-block;
   max-width: 80%;
@@ -11,7 +11,7 @@
   width: 100%;
   letter-spacing: 0;
   float: left;
-  font-size: 1.1em;
+  font-size: 1em;
   word-wrap: break-word;
 }
 
@@ -30,8 +30,8 @@
   display: flex;
   align-items: center;
   font-family: Helvetica;
-  color: #828282;
-  letter-spacing: 0.3px;
+  color: #7e7c7c;
+  letter-spacing: 0.2px;
 }
 
 .pl-10 {
