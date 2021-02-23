@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: microservices-okteto-frontend
+  name: webchat-okteto-frontend
 spec:
   type: LoadBalancer
   ports:
@@ -10,4 +10,4 @@ spec:
       targetPort: 3000
       name: http
   selector:
-    app: microservices-okteto-frontend
+    app: webchat-okteto-frontend

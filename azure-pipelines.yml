@@ -3,8 +3,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 variables:
-  backendImageName: 'microservices-okteto-backend'
-  frontendImageName: 'microservices-okteto-frontend'
+  backendImageName: 'webchat-okteto-backend'
+  frontendImageName: 'webchat-okteto-frontend'
   dockerUserId: 'pedroantonacio'
   namespaceId: 'pedroantonacio'
   tag: '$(Build.BuildId)'

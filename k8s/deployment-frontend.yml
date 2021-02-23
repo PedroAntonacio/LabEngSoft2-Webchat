@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservices-okteto-frontend
+  name: webchat-okteto-frontend
 spec:
   selector:
     matchLabels:
-      app: microservices-okteto-frontend
+      app: webchat-okteto-frontend
   replicas: 2
   template:
     metadata:
       labels:
-        app: microservices-okteto-frontend
+        app: webchat-okteto-frontend
     spec:
       containers:
-      - name: microservices-okteto-frontend
-        image: pedroantonacio/microservices-okteto-frontend:latest
+      - name: webchat-okteto-frontend
+        image: pedroantonacio/webchat-okteto-frontend:latest
         ports:
         - containerPort: 3000
