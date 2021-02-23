@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: microservices-okteto-frontend
-        image: miklt/microservices-okteto-frontend:latest
+        image: pedroantonacio/microservices-okteto-frontend:latest
         ports:
         - containerPort: 3000
