@@ -7,11 +7,20 @@ import ReactEmoji from 'react-emoji';
 const Message = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;
 
-  const trimmedName = name.trim().toLowerCase();
+  const trimmedName = name.trim();
 
-  if(user === trimmedName) {
-    isSentByCurrentUser = true;
+  if(user === 'Admin') {
+    return ((
+      <div className="messageContainer justifyMiddle">
+        <div className="messageBox backgroundAdmin">
+          <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>
+        </div>
+      </div>
+    ));
   }
+  else if(user === trimmedName) {
+    isSentByCurrentUser = true;
+  };
 
   return (
     isSentByCurrentUser

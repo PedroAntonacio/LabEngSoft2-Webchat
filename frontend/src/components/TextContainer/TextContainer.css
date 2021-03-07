@@ -3,14 +3,14 @@
   flex-direction: column;
   margin-left: 50px;
   color: white;
-  height: 90%;
+  height: 90vh;
   justify-content: space-between;
 }
 
 .activeContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 55%;
+  margin-bottom: 0vh;
 }
 
 .activeItem {

@@ -9,7 +9,8 @@ import Input from '../Input/Input';
 
 import './Chat.css';
 
-const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
+const PORT = process.env.PORT || 5000;
+const ENDPOINT = `localhost:${PORT}`;
 
 let socket;
 
@@ -26,7 +27,7 @@ const Chat = ({ location }) => {
     socket = io(ENDPOINT);
 
     setRoom(room);
-    setName(name)
+    setName(name);
 
     socket.emit('join', { name, room }, (error) => {
       if(error) {
@@ -60,7 +61,7 @@ const Chat = ({ location }) => {
           <Messages messages={messages} name={name} />
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </div>
-      <TextContainer users={users}/>
+      <TextContainer users={users} user={name}/>
     </div>
   );
 }
