@@ -7,8 +7,8 @@ Aluno: Pedro Orii Antonacio - nUSP 10333504
 - Próximos Passos: implementar banco de dados, login e autenticação
 
 Para executar a aplicação:
-- executar `node index.js` em ./backend/ e
-- executar `npm start` em ./backend/
+- executar `npm start` ou `node index.js` em ./backend/ e
+- executar `npm start` em ./frontend/
 
 
 Inspiração: https://github.com/adrianhajdin/project_chat_application
