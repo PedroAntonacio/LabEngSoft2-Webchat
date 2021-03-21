@@ -10,8 +10,7 @@ const TextContainer = ({ users, user }) => (
       <h1>Realtime Webchat App <span role="img" aria-label="emoji">💬</span></h1>
       <h2>PCS3853 - Laboratório de Engenharia de Software II<br></br>
       Pedro Orii Antonacio - nUSP 10333504</h2>
-      <p> - Tecnologias Utilizadas: Node.js, Socket.io (websockets), React<br></br>
-       - Próximos Passos: implementar banco de dados, login e autenticação</p>
+      <p> - Tecnologias Utilizadas: Node.js, Socket.io (websockets), React</p>
     </div>
     {
       users
