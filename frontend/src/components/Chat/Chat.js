@@ -9,7 +9,7 @@ import Input from '../Input/Input';
 
 import './Chat.css';
 
-// const PORT = process.env.PORT || 443;
+// const PORT = process.env.PORT || 80;
 // const ENDPOINT = `localhost:${PORT}`;
 const ENDPOINT = 'https://webchat-okteto-backend-pedroantonacio.cloud.okteto.net:443';
 
