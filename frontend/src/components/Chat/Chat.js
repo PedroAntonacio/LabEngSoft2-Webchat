@@ -11,6 +11,7 @@ import './Chat.css';
 
 const PORT = process.env.PORT || 5000;
 const ENDPOINT = `localhost:${PORT}`;
+// const ENDPOINT = `webchat-okteto-backend-pedroantonacio.cloud.okteto.net/`;
 
 let socket;
 
@@ -34,7 +35,7 @@ const Chat = ({ location }) => {
         alert(error);
       }
     });
-  }, [ENDPOINT, location.search]);
+  }, [location.search]);
   
   useEffect(() => {
     socket.on('message', message => {
