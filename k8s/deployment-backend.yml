@@ -16,4 +16,4 @@ spec:
       - name: webchat-okteto-backend
         image: pedroantonacio/webchat-okteto-backend:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
