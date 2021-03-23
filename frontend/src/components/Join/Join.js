@@ -17,10 +17,10 @@ export default function SignIn() {
         </p>
         <h1 className="heading">Entre no chat</h1>
         <div>
-          <input placeholder="Nome" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+          <input placeholder="Nome" className="joinInput" type="text" onChange={(event) => setName(event.target.value.toLowerCase())} />
         </div>
         <div>
-          <input placeholder="Sala" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
+          <input placeholder="Sala" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value.toLowerCase())} />
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} type="submit">Entrar</button>
