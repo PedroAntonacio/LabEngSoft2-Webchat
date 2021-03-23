@@ -9,9 +9,10 @@ import Input from '../Input/Input';
 
 import './Chat.css';
 
-// const PORT = process.env.PORT || 8080;
-// const ENDPOINT = `localhost:${PORT}`;
-const ENDPOINT = 'https://webchat-okteto-backend-pedroantonacio.cloud.okteto.net:443';
+const PORT = process.env.PORT || 8080;
+const ENDPOINT = `localhost:${PORT}`;
+// const ENDPOINT = 'https://webchat-okteto-backend-pedroantonacio.cloud.okteto.net:443';
+// const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
 
 let socket;
 
@@ -25,7 +26,7 @@ const Chat = ({ location }) => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT);
+    socket = io.connect(ENDPOINT);
 
     setRoom(room);
     setName(name);
