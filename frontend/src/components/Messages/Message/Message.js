@@ -9,7 +9,7 @@ const Message = ({ message: { text, user }, name }) => {
 
   const trimmedName = name.trim();
 
-  if(user === 'Admin') {
+  if(user === 'Admin' || user === 'admin') {
     return ((
       <div className="messageContainer justifyMiddle">
         <div className="messageBox backgroundAdmin">

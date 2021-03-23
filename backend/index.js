@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-// const cors = require('cors');
+const cors = require('cors');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
@@ -9,25 +9,9 @@ const router = require('./router');
 
 const app = express();
 const server = http.createServer(app);
+const io = socketio(server);
 
-const io = socketio(server, {
-  // origins: ["localhost:3000"],
-  origins: ["https://webchat-okteto-frontend-pedroantonacio.cloud.okteto.net/"],
-
-  // optional, useful for custom headers
-  handlePreflightRequest: (req, res) => {
-    res.writeHead(200, {
-      // "Access-Control-Allow-Origin": "localhost:3000",
-      "Access-Control-Allow-Origin": "https://webchat-okteto-frontend-pedroantonacio.cloud.okteto.net/",
-      "Access-Control-Allow-Methods": "GET,POST",
-      "Access-Control-Allow-Headers": "my-custom-header",
-      "Access-Control-Allow-Credentials": true
-    });
-    res.end();
-  }
-});
-
-// app.use(cors());
+app.use(cors());
 app.use(router);
 
 io.on('connect', (socket) => {
