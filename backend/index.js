@@ -11,14 +11,14 @@ const app = express();
 const server = http.createServer(app);
 
 const io = socketio(server, {
-  origins: ["localhost:3000"],
-  // origins: ["https://webchat-okteto-frontend-pedroantonacio.cloud.okteto.net/"],
+  // origins: ["localhost:3000"],
+  origins: ["https://webchat-okteto-frontend-pedroantonacio.cloud.okteto.net/"],
 
   // optional, useful for custom headers
   handlePreflightRequest: (req, res) => {
     res.writeHead(200, {
-      "Access-Control-Allow-Origin": "localhost:3000",
-      // "Access-Control-Allow-Origin": "https://webchat-okteto-frontend-pedroantonacio.cloud.okteto.net/",
+      // "Access-Control-Allow-Origin": "localhost:3000",
+      "Access-Control-Allow-Origin": "https://webchat-okteto-frontend-pedroantonacio.cloud.okteto.net/",
       "Access-Control-Allow-Methods": "GET,POST",
       "Access-Control-Allow-Headers": "my-custom-header",
       "Access-Control-Allow-Credentials": true
