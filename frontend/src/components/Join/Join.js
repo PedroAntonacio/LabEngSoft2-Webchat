@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 import './Join.css';
 
 export default function SignIn() {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const nome = urlParams.has('nome') ? urlParams.get('nome') : '';
+  const sala = urlParams.get('sala') ? urlParams.get('sala') : '';
+
+  const [name, setName] = useState(nome);
+  const [room, setRoom] = useState(sala);
 
   return (
     <div className="joinOuterContainer">
@@ -17,10 +23,10 @@ export default function SignIn() {
         </p>
         <h1 className="heading">Entre no chat</h1>
         <div>
-          <input placeholder="Nome" className="joinInput" type="text" onChange={(event) => setName(event.target.value.toLowerCase())} />
+          <input placeholder="Nome" defaultValue={nome} className="joinInput" type="text" onChange={(event) => setName(event.target.value.toLowerCase())} />
         </div>
         <div>
-          <input placeholder="Sala" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value.toLowerCase())} />
+          <input placeholder="Sala" defaultValue={sala} className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value.toLowerCase())} />
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} type="submit">Entrar</button>
