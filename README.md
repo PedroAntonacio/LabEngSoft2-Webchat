@@ -3,7 +3,7 @@
 Projeto da Disciplina PCS3853 - Laboratório de Engenharia de Software II (2021)
 Aluno: Pedro Orii Antonacio - nUSP 10333504
 
-- Tecnologias Utilizadas: Node.js, Socket.io (websockets), React
+- Tecnologias Utilizadas: Node.js, Socket.io (websockets), React.
 
 Para executar a aplicação localmente:
 - executar `npm start` em ./backend/ e
