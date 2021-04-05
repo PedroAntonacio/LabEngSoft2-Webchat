@@ -6,7 +6,7 @@ Aluno: Pedro Orii Antonacio - nUSP 10333504
 - Tecnologias Utilizadas: Node.js, Socket.io (websockets), React
 
 Para executar a aplicação localmente:
-- executar `npm start` ou `node index.js` em ./backend/ e
+- executar `npm start` em ./backend/ e
 - executar `npm start` em ./frontend/
 
 
