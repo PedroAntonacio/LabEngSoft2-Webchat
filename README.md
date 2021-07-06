@@ -1,13 +1,10 @@
-# Realtime WebChat Application
+# Realtime WebChat Application (Microservice Architecture)
 
-Projeto da Disciplina PCS3853 - Laboratório de Engenharia de Software II (2021)
-Aluno: Pedro Orii Antonacio - nUSP 10333504
+- Used Technologies: Node.js, Socket.io (websockets), React, okteto (Kubernetes)
 
-- Tecnologias Utilizadas: Node.js, Socket.io (websockets), React
-
-Para executar a aplicação localmente:
-- executar `npm start` em ./backend/ e
-- executar `npm start` em ./frontend/
+To run the app locally:
+- run `npm start` at ./backend/ and
+- run `npm start` at ./frontend/
 
 
-Inspiração: https://github.com/adrianhajdin/project_chat_application
+App inspiration: https://github.com/adrianhajdin/project_chat_application
